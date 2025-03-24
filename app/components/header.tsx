@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Img from "./img";
+import Timer from "./timer";
 
 function Header() {
   const [isScrollDown, setIsScrollDown] = useState<boolean>(true);
@@ -48,7 +49,7 @@ function Header() {
       }`}
     >
       <p ref={headerRef} className={`top-header`}>
-        30% OFF if you order in the next <span className="timer">06:40</span>
+        30% OFF if you order in the next <Timer />
       </p>
       <nav
         className={`${
